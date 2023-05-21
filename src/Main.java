@@ -3,14 +3,14 @@ import exceptions.WrongPasswordException;
 
 public class Main {
 
-    private static final String VALIDATE_PATTERN = "^[a-zA-Z0-9-_]+$";
+    private static final String VALIDATE_PATTERN = "^[A-z0-9-_]+$";
 
     public static void main(String[] args) {
         enterLoginAndPassword("login", "qwerty", "qwerty");
         enterLoginAndPassword("login~", "qwerty", "qwerty");
         enterLoginAndPassword("login", "~qwerty~", "qwerty");
         enterLoginAndPassword("login_login_login_login_login_login", "qwerty", "qwerty");
-        enterLoginAndPassword("login", "qwerty", "qwerty");
+        enterLoginAndPassword("Login", "Qwerty", "Qwerty");
     }
 
     private static boolean enterLoginAndPassword(String login, String password, String confirmPassword) {
